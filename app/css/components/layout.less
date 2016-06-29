@@ -1,0 +1,47 @@
+
+/* Layout */
+
+html, body {
+  background-color: @bg_color;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  color: @main_color;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  header {
+    background-color: @header_color;
+    padding:@main_padding;
+    height:@header_height;
+    overflow: hidden;
+    border-bottom:2px solid red;
+    h1 {
+      padding:0;
+      margin:0;
+      font-size: 2.2rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+  }
+
+  #root {
+    height:100%;
+
+    & > div {
+      height:100%;
+    }
+  }
+
+  .main-content {
+    padding:@main_padding;
+    height: calc(~"100% -" (@header_height));
+
+    &.types_list_opened {
+      margin-left:@types_list_size;
+    }
+  }
+}

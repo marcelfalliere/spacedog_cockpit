@@ -1,0 +1,32 @@
+
+.types-list {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  border-right:2px solid darken(@red, 12%);
+  border-bottom:2px solid darken(@red, 12%);
+  width:@types_list_size;
+  float:left;
+
+  li {
+    margin:0;
+    padding:@main_padding;
+    transition: all @default_transition;
+
+    &.types-list-subheader {
+
+    }
+
+    &.types-list-subheader {
+        padding:@main_padding/2;
+        font-style: italic;
+        font-size: .8rem;
+    }
+
+    &:hover:not(.types-list-subheader) {
+      background-color:fadein(lighten(@bg_color,10%), 10%);
+      cursor:pointer;
+    }
+
+  }
+}
